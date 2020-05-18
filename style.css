@@ -1,0 +1,47 @@
+#active{ /* id 값을 선택 // id값은 단 한번만 등장해야함. */
+  color: red;
+}
+.saw{ /* .을 붙이면 이 선택자는 웹페이지에서 class가 "saw"인 모든 태그를 가리키는 선택자가 됨*/
+  color: gray;
+}
+a { /* 모든 a 태그에 대해서 아래와 같이 적용해라 */
+  color: black;
+  text-decoration: none; /*기본적으로 모든 밑줄 제거*/
+}
+h1{
+  font-size: 45px;
+  text-align: center;
+  border-bottom: 1px solid gray;
+  margin: 0px;
+  padding: 20px;
+}
+ol {
+  border-right: 1px solid gray;
+  width: 100px;
+  margin: 0px;
+  padding: 20px;
+}
+body{
+  margin: 0px;
+}
+/* 선택자 우선권 태그 < 클래스 < ID */
+/* 똑같은 형태의 선택자일 경우 맨 마지막에 등장하는 선택자가 우선순위가 높다 */
+#grid{
+display: grid;
+grid-template-columns: 150px 1fr;
+}
+#article{
+padding-left: 24px;
+}
+@media(max-width: 800px){ /* 만약 가로 800px 이하라면 아래의 값을 적용한다 */
+#grid{ /* 본문의 그리드를 블록으로 설정 변경 */
+  display: block;
+}
+#grid ol{ /*선 지우기 */
+  border-right: none;
+}
+h1{ /*제목 선 지우기 */
+  border-bottom: none;
+}
+
+}
