@@ -7,8 +7,19 @@
   <link rel="stylesheet" href="style.css" />
 </head> <!-- 머릿글 -->
 
-<body> <!-- 본문 -->
-  <h1><a href="index.html">WEB1</a></h1> <!-- WEB을 누르면 index.html로 넘어가는 하이퍼링크-->
+<body style="background-color:black;"> <!-- 본문 -->
+  <h1><a href="index.html">WEB</a></h1> <!-- WEB을 누르면 index.html로 넘어가는 하이퍼링크-->
+  <input type="button" value="night" onclick="
+  document.querySelector('body').style.backgroundColor = 'black';
+  document.querySelector('body').style.color = 'white';
+  ">
+  <input type="button" value="day" onclick="
+  document.querySelector('body').style.backgroundColor = 'white';
+  document.querySelector('body').style.color = 'black';
+
+  ">
+
+
   <div id="grid">
   <ol>
     <li><a href="1.html" style="color:blue">HTML</a></li>  <!-- HTML을 누르면 1.html로 넘어가는 하이퍼링크-->
