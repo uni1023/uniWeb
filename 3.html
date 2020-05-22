@@ -9,6 +9,8 @@
 
 <body style="background-color:black;"> <!-- 본문 -->
   <h1><a href="index.html">WEB</a></h1> <!-- WEB을 누르면 index.html로 넘어가는 하이퍼링크-->
+
+<!-- ver.1 낮밤 변환 버튼
   <input type="button" value="night" onclick="
   document.querySelector('body').style.backgroundColor = 'black';
   document.querySelector('body').style.color = 'white';
@@ -18,6 +20,20 @@
   document.querySelector('body').style.color = 'black';
 
   ">
+-->
+
+  <!-- ver.2 낮밤 변환 버튼 (통합) 아래 if else문 설명 : (if)이 값이 night와 같다면 야간모드에 해당되는 코드가 실행되고 (else) 그렇지 않다면 주간모드가 실행됨. -->
+  <input id="night_day" type="button" value="night" onclick=" 
+  if (document.querySelector('#night_day').value === 'night'){ 
+    document.querySelector('body').style.backgroundColor = 'black';
+    document.querySelector('body').style.color = 'white';
+    document.querySelector('#night_day').value = 'day';
+ } else {
+    document.querySelector('body').style.backgroundColor = 'white';
+    document.querySelector('body').style.color = 'black';
+    document.querySelector('#night_day').value = 'night';
+}
+">  <!-- 페이지가 열렸을때 클릭하면 나이트로 바뀌는 버튼-->
 
 
   <div id="grid">
@@ -30,7 +46,41 @@
   <h2>JavaScript</h2>
 
   <p>
+    코딩을 할 때에는 항상 극단적으로 생각해라
+    3개가 아니라 3억개를 수정하기 위한 방법을 총 동원해야 함
+
+    자바는 자바다 자바이기 이전에 자바였기 떄무니다 자바는 자바다 자바이기 이전에 자바였기 떄무니다자바는 자바다 자바이기 이전에 자바였기 떄무니다자바는 자바다 자바이기 이전에 자바였기 떄무니다자바는 자바다 자바이기 이전에 자바였기 떄무니다자바는 자바다 자바이기 이전에 자바였기 떄무니다자바는 자바다 자바이기 이전에 자바였기 떄무니다자바는 자바다 자바이기 이전에 자바였기 떄무니다자바는 자바다 자바이기 이전에 자바였기 떄무니다자바는 자바다 자바이기 이전에 자바였기 떄무니다자바는 자바다 자바이기 이전에 자바였기 떄무니다자바는 자바다 자바이기 이전에 자바였기 떄무니다자바는 자바다 자바이기 이전에 자바였기 떄무니다자바는 자바다 자바이기 이전에 자바였기 떄무니다
   </p>
+
+    <!-- ver.3 낮밤 변환 버튼 (통합) this로 바꿔주면서 작동은 그대로지만 훨씬 간결해졌다. -->
+  <input type="button" value="night" onclick=" 
+  if (this.value === 'night'){ 
+    document.querySelector('body').style.backgroundColor = 'black';
+    document.querySelector('body').style.color = 'white';
+    this.value = 'day';
+ } else {
+    document.querySelector('body').style.backgroundColor = 'white';
+    document.querySelector('body').style.color = 'black';
+    this.value = 'night';
+}
+">  <!-- 페이지가 열렸을때 클릭하면 나이트로 바뀌는 버튼-->
+
+
+
+    <!-- ver.4 낮밤 변환 버튼 (통합) 중복 완전 제거 document.querySelector('body')를 target 변수로 옮기면서 간편해 -->
+  <input type="button" value="night" onclick=" 
+  var target = document.querySelector('body');
+  if (this.value === 'night'){ 
+    target.style.backgroundColor = 'black';
+    target.style.color = 'white';
+    this.value = 'day';
+ } else {
+    target.style.backgroundColor = 'white';
+    target.style.color = 'black';
+    this.value = 'night';
+}
+">  <!-- 페이지가 열렸을때 클릭하면 나이트로 바뀌는 버튼-->
+
     </div>
   </div>
 </body>
