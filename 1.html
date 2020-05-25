@@ -5,10 +5,15 @@
   <title>WEB1 - HTML</title> <!--웹 최상단 이름  -->
   <meta charset="utf-8">
   <link rel="stylesheet" href="style.css" />
+  <script src="colors.js"></script>
 </head> <!-- 머릿글 -->
 
 <body> <!-- 본문 -->
   <h1><a href="index.html">WEB1</a></h1> <!-- <a> 태그 = WEB을 누르면 index.html로 넘어가는 하이퍼링크 == WEB이라는 정보가 링크다-->
+
+    <input id="night_day" type = "button" value = "night" onclick = "nightDayHandler(this);">
+
+
     <div id="grid">
   <ol>
     <li><a href="1.html" style="color:blue; text-decoration:underline;">HTML</a></li>  <!-- HTML을 누르면 1.html로 넘어가는 하이퍼링크 // 해당 글만 밑줄 허용-->
@@ -17,6 +22,9 @@
   </ol>
   <div id ="article">
   <h2>HTML</h2><!-- 2번째로 큰 헤드 -->
+
+
+
 
 <p>
 html은 
